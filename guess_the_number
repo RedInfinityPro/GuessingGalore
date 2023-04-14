@@ -1,0 +1,30 @@
+import random
+
+points = 0
+Incorect_Times = 3
+Max = 9
+random_number = random.randint(0,Max)
+
+while points > -1:
+  try:
+    user = int(input("guess the number {} - {} > ".format(0,Max)))
+    if user != random_number:
+      # incorect times and take away points
+      if Incorect_Times > 0:
+        Incorect_Times -= 1
+      else:
+        points -= 1
+      # print how the user is incorrect
+      if user > random_number:
+        print("Sorry, you have guessed too high.")
+      else:
+        print("Sorry, you have guessed too low.")
+    else:
+      print("congratulations! Your number is correct")
+      Incorect_Times = 3
+      Max *= random.randint(0,3)
+      random_number = random.randint(0,Max)
+  except:
+      print("It's sad to se you go")
+else:
+  print("Sorry, you have lost \nThe number was",random_number)
