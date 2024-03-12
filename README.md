@@ -1,4 +1,4 @@
-# simple_projects
+# GuessingGalore
 
 This project includes two Python-based interactive word and number guessing games. The first game involves a player guessing a randomly generated number within a specified range, with limited attempts. If the player fails, they lose a point. The second game involves a word guessing game, with hints based on word length and incorrect guesses.
 
